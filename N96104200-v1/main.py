@@ -25,6 +25,8 @@ def get_lasttime(time_str, date_format):
     last_time = datetime.strptime(time_str, date_format)
     return last_time
 
+
+
 if __name__ == "__main__":
     args = config()
 
