@@ -2,8 +2,8 @@
 
 ## Source
 
-  - [Slide](https://docs.google.com/presentation/d/1ZwXe4xMflCxiDQ7RK6z_LH88r0Dp38sQ/edit#slide=id.p1)
-  - [Dashboard]()
+  - [Slide 2022](https://docs.google.com/presentation/d/1ZwXe4xMflCxiDQ7RK6z_LH88r0Dp38sQ/edit#slide=id.p1)
+  - [Dashboard 2022](https://docs.google.com/spreadsheets/d/1hqoxG48A159buQ-GuoU7Fo-QrGKYmE1DFgPckJR0dFI/edit#gid=0)
 
 ## Rules
 
@@ -62,7 +62,7 @@
 6. 修正後的電費公式
    ![修正後的電費公式](img/公式修改說明.png)
 7. 台電電價 (市電單價)
-   - 2.5256 (NTD/kw)S
+   - 2.5256 (NTD/kw)
 
 ## Prerequisite
 - python 3.8 (仍然可以使用 conda 模擬)
