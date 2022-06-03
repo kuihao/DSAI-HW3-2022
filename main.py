@@ -30,6 +30,7 @@ if __name__ == "__main__":
 
     # 取得耗電量歷史紀錄
     consumption_df = pd.read_csv(args.consumption) 
+    bidresult_df = pd.read_csv(args.bidresult) 
 
     # 取得最後時間 (耗電紀錄)
     date_format_str = '%Y-%m-%d %H:%M:%S'
@@ -38,7 +39,16 @@ if __name__ == "__main__":
     now_time = last_time + timedelta(hours=1)
 
     data = []
-    for i in range(100):
-        now_time = now_time + timedelta(minutes=10) #timedelta(hours=1)
-        data.append([now_time.strftime(date_format_str), "sell", 0.01, 0.01]) # time, action, target_price, target_volume
+    if bidresult_df.empty:
+        for i in range(50):
+            #print("YES")
+            now_time = now_time #+ timedelta(minutes=10) #timedelta(hours=1)
+            data.append([now_time.strftime(date_format_str), "buy", 2.54, 0.01]) # time, action, target_price, target_volume
+            # 台電價 2.5256
+    else:
+        for i in range(24):
+            #print("NO")
+            new_time = now_time + timedelta(hours=i)
+            data.append([new_time.strftime(date_format_str), "sell", 0.01, 0.01]) # time, action, target_price, target_volume
+
     output(args.output, data)
