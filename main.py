@@ -43,7 +43,7 @@ if __name__ == "__main__":
         for i in range(50):
             #print("YES")
             now_time = now_time #+ timedelta(minutes=10) #timedelta(hours=1)
-            data.append([now_time.strftime(date_format_str), "buy", 2.54, 0.01]) # time, action, target_price, target_volume
+            data.append([now_time.strftime(date_format_str), "sell", 1000000, 1000000]) # time, action, target_price, target_volume
             # 台電價 2.5256
     else:
         for i in range(24):
