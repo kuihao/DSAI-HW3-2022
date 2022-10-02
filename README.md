@@ -98,3 +98,8 @@ python main.py
 
 ## Training Model
 LSTM
+
+## Result
+* Ranking: 1/38
+* Grade Distribution:
+    * <img src="img/hw3_rank.jpg" height="50%" width="50%">
